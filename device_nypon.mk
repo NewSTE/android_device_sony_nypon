@@ -18,10 +18,6 @@
 PRODUCT_PACKAGES := \
     Torch
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
-
 #charging animation
 $(call inherit-product, device/sony/montblanc-common/prebuilt/resources-540x960.mk)
 
