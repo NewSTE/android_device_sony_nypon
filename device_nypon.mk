@@ -14,8 +14,23 @@
 # limitations under the License.
 #
 
-# Inherit from full_nypon
-$(call inherit-product, device/sony/nypon/full_nypon.mk)
+# Torch
+PRODUCT_PACKAGES := \
+    Torch
+
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+
+#charging animation
+$(call inherit-product, device/sony/montblanc-common/prebuilt/resources-540x960.mk)
+
+# Set those variables here to overwrite the inherited values.
+PRODUCT_NAME := nypon
+PRODUCT_DEVICE := nypon
+PRODUCT_BRAND := Sony
+PRODUCT_MANUFACTURER := Sony
+PRODUCT_MODEL := Xperia P
 
 # Inherit the proprietary counterpart
 $(call inherit-product-if-exists, vendor/sony/nypon/nypon-vendor.mk)
@@ -133,4 +148,3 @@ ste.video.decoder.h264.max.lev=4.2 \
 persist.audio.hp=true \
 ro.service.swiqi.supported=false \
 persist.service.swiqi.enable=0
-
