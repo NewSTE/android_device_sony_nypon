@@ -14,19 +14,8 @@
 # limitations under the License.
 #
 
-# Torch
-PRODUCT_PACKAGES := \
-    Torch
-
 #charging animation
 $(call inherit-product, device/sony/montblanc-common/prebuilt/resources-540x960.mk)
-
-# Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := nypon
-PRODUCT_DEVICE := nypon
-PRODUCT_BRAND := Sony
-PRODUCT_MANUFACTURER := Sony
-PRODUCT_MODEL := Xperia P
 
 # Inherit the proprietary counterpart
 $(call inherit-product-if-exists, vendor/sony/nypon/nypon-vendor.mk)
