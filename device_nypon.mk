@@ -61,6 +61,10 @@ PRODUCT_COPY_FILES += \
 # USB function switching
 PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/config/init.st-ericsson.usb.rc:root/init.st-ericsson.usb.rc
+   
+#RamDisk
+PRODUCT_COPY_FILES += \
+   $(LOCAL_PATH)/config/init.nypon.rc:root/init.nypon.rc
 
 PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/config/vold.fstab:system/etc/vold.fstab \
